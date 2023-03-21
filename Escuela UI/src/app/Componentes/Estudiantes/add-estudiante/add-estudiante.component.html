@@ -1,0 +1,28 @@
+<div class="container my-5">
+    <h1 class="mb-3">Agregar Nuevo Estudiante</h1>
+    <div class = "col-6">
+    <form #form="ngForm" (ngSubmit)="agregarEstudiante()">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" class="form-control" id="nombre" name = "nombre"  placeholder="Ingresa el nombre del alumno" [(ngModel)]="addEstudianteRequest.nombre">
+            <small id="nombrelHelp" class="form-text text-muted">Aqui ingresarás el nombre de tu alumno que de seas agregar.</small>
+          </div>
+          <div class="form-group">
+            <label for="apellido">Apellido</label>
+            <input type="text" class="form-control" id="apellido" name = "apellido"  placeholder="Ingresa el apellido paterno del alumno"[(ngModel)]="addEstudianteRequest.apellido">
+            <small id="apellidoHelp" class="form-text text-muted">Aqui ingresarás el nombre de tu alumno que de seas agregar.</small>
+          </div>
+          <div class="form-group">
+            <label for="edad">Edad</label>
+            <input type="number" class="form-control" id="edad" name="edad" placeholder="Ingresa la edad del alumno" [(ngModel)]="addEstudianteRequest.edad">
+            <small id="edadlHelp" class="form-text text-muted">Aqui ingresarás la edad de tu alumno que de seas agregar.</small>
+          </div>
+          <div class="form-group">
+            <label for="genero">Genero</label>
+            <input type="text" class="form-control" id="genero" name = "genero" placeholder="Ingresa el genero del alumno" [(ngModel)]="addEstudianteRequest.genero">
+          </div>
+          <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+    </div>
+
+</div>

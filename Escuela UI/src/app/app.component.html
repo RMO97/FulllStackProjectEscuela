@@ -1,0 +1,27 @@
+<div class=" bg-light text-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Escuela Secundaria San Ricardo</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <!--se sustituyo href por routerLink ya que el ultimo en caso de recargar la pagina routerLink "guarda" lo que pueda haber dentro de un campo vacio-->
+          <a class="nav-link "  routerLink="/estudiantes">Estudiantes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/maestros">Maestros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/experiencias">Experiencia Educativa </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+
+
+</div>
+<router-outlet></router-outlet>

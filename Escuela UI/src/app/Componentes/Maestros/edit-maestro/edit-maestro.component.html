@@ -1,0 +1,23 @@
+<div class="container my-5">
+    <h1 class="mb-3">Editar Maestra/o</h1>
+    <div class = "col-6">
+    <form #form="ngForm" (ngSubmit)="actualizarMaestro()">
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name = "id"  readonly [(ngModel)]="maestrosDetalles.id">
+          </div>
+          <div class="form-group">
+            <label for="nombreMtro">Nombre</label>
+            <input type="text" class="form-control" id="nombreMtro" name = "nombreMtro"  placeholder="Ingresa el nombre del maestro" [(ngModel)]="maestrosDetalles.nombreMtro">
+          </div>
+          <div class="form-group">
+            <label for="edadMtro">Edad</label>
+            <input type="number" class="form-control" id="edadMtro" name = "edadMtro"  placeholder="Ingresa el nombre del academico"[(ngModel)]="maestrosDetalles.edadMtro">
+          </div>
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <button type="button" class="btn btn-danger" (click)="borrarMaestro(maestrosDetalles.id)">Eliminar</button>
+
+    </form>
+    </div>
+
+</div>

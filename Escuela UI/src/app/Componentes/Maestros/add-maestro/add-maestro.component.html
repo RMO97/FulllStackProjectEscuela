@@ -1,0 +1,19 @@
+<div class="container my-5">
+    <h1 class="mb-3">Agregar Nueva/o Maestra/o</h1>
+    <div class = "col-6">
+    <form #form="ngForm" (ngSubmit)="agregarMaestro()">
+          <div class="form-group">
+            <label for="nombreMtro">Nombre</label>
+            <input type="text" class="form-control" id="nombreMtro" name = "nombreMtro"  placeholder="Ingresa el nombre del maestro" [(ngModel)]="addMaestroRequest.nombreMtro">
+            <small id="nombreMtrolHelp" class="form-text text-muted">Aqui ingresarás el nombre del maestro que deseas agregar.</small>
+          </div>
+          <div class="form-group">
+            <label for="edadMtro">Edad</label>
+            <input type="number" class="form-control" id="edadMtro" name = "edadMtro"  placeholder="Ingresa el nombre del academico"[(ngModel)]="addMaestroRequest.edadMtro">
+            <small id="edadMtroHelp" class="form-text text-muted">Aqui ingresarás la edad del maestro que deseas agregar.</small>
+          </div>
+          <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+    </div>
+
+</div>

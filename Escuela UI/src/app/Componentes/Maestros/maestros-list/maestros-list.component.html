@@ -1,0 +1,31 @@
+<div>
+    <h1>Maestros Registrados</h1>
+    <div class="row">
+      <div class="col">
+          <div class="text-end">
+            <button type="button" class="btn btn-outline-success" onclick="window.location.href='/maestros/add';">Agregar Maestro</button>
+          </div>
+      </div>
+    </div>
+    <!--el ngIf sirve para decir que en el caso de que no haya nada dentro de la tabla muestre unicamente lo que hay debajo de la etiqueta de table-->
+    <table class="table table-striped" *ngIf="maestros && maestros.length > 0 ">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Edad</th>
+            <th scope="col"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let maestros of maestros">
+            <td>{{maestros.id}}</td>
+            <td>{{maestros.nombreMtro}}</td>
+            <td>{{maestros.edadMtro}}</td>
+            <td><a [routerLink]="['/maestros','edit',maestros.id]">Editar/Eliminar</a></td>
+          </tr>
+        </tbody>
+      </table>
+    
+      <p *ngIf="!maestros || maestros.length <= 0">No hay maestros registrados</p>
+    </div>
